@@ -1,0 +1,52 @@
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .proximamente{
+        display: flex;
+        position: relative;
+        width: 80%;
+        height: 500px;
+        background: linear-gradient(357deg, rgba(0,0,0,1) 0%, rgba(51,120,255,0) 100%), url("/avatar.jpg");
+        border-radius: 25px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        cursor: pointer;
+        .info{
+            position: absolute;
+            bottom: 0;
+            padding: 20px 50px;
+            h4{
+                color: #C8F560;
+                margin: 0px;
+            }
+            h2{
+                color: white;
+                margin: 0px;
+                font-size: 50px;
+            }
+            .trailer{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                a{
+                    display: flex;
+                    text-decoration: none;
+                }
+                i{
+                    font-size: 30px;
+                    color: #C8F560;
+                    margin-right: 10px;
+                }
+                h3{
+                    color: #C8F560;
+                    font-size: 20px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+.container{
+    padding: 50px;
+    .title{
+        width: 100%;
+        padding: 10px 40px;
+        background-color: rgba(0, 0, 0, 0.596);
+        border-radius: 30px;
+        margin-bottom: 30px;
+        h3{
+            color: white;
+        }
+    }
+
+    .listMovies{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        .movie{
+            margin-bottom: 50px;
+            cursor: pointer;
+            width: 250px;
+            height: 350px;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            h3{ 
+                position: absolute;
+                margin: 0px;
+                bottom: 35px;
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .vote{
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                position: absolute;
+                border-radius: 5px;
+                bottom: 10px;
+                h4{
+                    margin: 0px;
+                    color: #C8F560;
+                }
+                i{
+                    color: #C8F560;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
