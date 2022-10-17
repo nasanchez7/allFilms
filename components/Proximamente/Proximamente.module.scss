@@ -2,44 +2,57 @@
     padding: 50px;
     .title{
         width: 100%;
-        padding: 10px 40px;
-        background-color: rgba(0, 0, 0, 0.596);
-        border-radius: 30px;
+        padding: 5px 40px;
+        border-bottom: 1px solid white;
         margin-bottom: 30px;
+        display: flex;
+        align-items: center;
         h3{
             color: white;
         }
     }
-
+    .pagination{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .listMovies{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-items: center;
         .movie{
-            margin-bottom: 50px;
-            cursor: pointer;
-            width: 250px;
-            height: 350px;
-            border-radius: 15px;
-            padding: 20px;
             position: relative;
+            margin-bottom: 50px;
+            width: 250px;
+            cursor: pointer;
+            .play{
+                i{ 
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 50%;
+                    left: 35%;
+                    color: #C8F560;
+                    font-size: 70px;
+                }
+            }
+            img{
+                border-radius: 10px;
+            }
             h3{ 
-                position: absolute;
                 margin: 0px;
-                bottom: 35px;
                 color: white;
-                font-size: 18px;
+                font-size: 15px;
                 font-weight: 600;
+                width: 250px;
             }
             .vote{
                 width: fit-content;
                 height: fit-content;
                 display: flex;
                 align-items: center;
-                position: absolute;
                 border-radius: 5px;
-                bottom: 10px;
                 h4{
                     margin: 0px;
                     color: #C8F560;
@@ -47,6 +60,19 @@
                 i{
                     color: #C8F560;
                     margin-right: 10px;
+                }
+            }
+        }
+        .movie:hover{
+            transition: 0.5s;
+            img{
+                transition: 0.5s;
+                opacity: 20%;
+            }
+            .play{
+                i{
+                    transition: 0.5s;
+                    opacity: 100%;
                 }
             }
         }

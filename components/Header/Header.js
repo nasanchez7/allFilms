@@ -3,7 +3,9 @@ import Link from "next/link"
 import styles from "./Header.module.scss";
 
 
-export default function Header (){
+export default function Header ({movie}){
+
+
     return(
         <header className={styles.header}>
             <div className={styles.proximamente}>

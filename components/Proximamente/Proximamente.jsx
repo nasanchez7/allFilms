@@ -16,20 +16,21 @@ const Proximamente = ({peliculas, series}) => {
                         <div
                         key={index}
                         className={styles.movie}
-                        style={{
-                            background: `linear-gradient(357deg, rgba(0,0,0,1) 0%, rgba(51,120,255,0) 100%), url(${img500+p.poster_path})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat'
-                        }}
                         >
+                            <Image
+                            src={img500+p.poster_path}
+                            width={250}
+                            height={350}
+                            />
                             <h3> {p.title} </h3>
                             <div className={styles.vote}>
                                 <i className='bx bxs-star'></i>
                                 <h4> {p.vote_average} </h4>
                             </div>
+                            <div className={styles.play}>
+                                <i className='bx bx-play-circle play'></i>
+                            </div>
                         </div>
-                        
                     )
                 })}
             </div>
@@ -42,17 +43,19 @@ const Proximamente = ({peliculas, series}) => {
                         <div
                         key={index}
                         className={styles.movie}
-                        style={{
-                            background: `linear-gradient(357deg, rgba(0,0,0,1) 0%, rgba(51,120,255,0) 100%), url(${img500+s.poster_path})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat'
-                        }}
                         >
+                            <Image
+                            src={img500+s.poster_path}
+                            width={250}
+                            height={350}
+                            />
                             <h3> {s.original_name} </h3>
                             <div className={styles.vote}>
                                 <i className='bx bxs-star'></i>
                                 <h4> {s.vote_average} </h4>
+                            </div>
+                            <div className={styles.play}>
+                                <i className='bx bx-play-circle play'></i>
                             </div>
                         </div>
                     )

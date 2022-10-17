@@ -10,43 +10,50 @@
         cursor: pointer;
         h3{
             color: white;
-            font-size: 28px;
+            font-size: 30px;
         }
         h2{
             color: #C8F560;
-            font-size: 28px;
+            font-size: 30px;
         }
     }
     .items{
         display: flex;
         align-items: center;
-        li{
-            list-style-type: none;
+        a{
             color: white;
             margin-right: 40px;
-            font-size: 18x;
+            font-size: 25x;
             cursor: pointer;
             font-weight: 600;
         }
-        li:hover{
+        li{
+            list-style-type: none;
+        }
+        a:hover{
             color: #C8F560;
             transition: 0.3s;
         }
     }
-    button{
-        border: none;
-        border: 1px solid #C8F560;
-        background-color: transparent;
-        color: #C8F560;
-        border-radius: 5px;
-        height: fit-content;
-        padding: 10px 20px;
-        font-size: 18px;
-        cursor: pointer;
+    .avatar{
+        display: flex;
+        align-items: center;
+        button{
+            border: none;
+            border: 1px solid #C8F560;
+            background-color: transparent;
+            color: #C8F560;
+            border-radius: 5px;
+            height: fit-content;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover{
+            transition: 0.3s;
+            background-color: rgba(0, 0, 0, 0.466);
+    
+        }
     }
-    button:hover{
-        transition: 0.3s;
-        background-color: rgba(0, 0, 0, 0.466);
-
-    }
+    
 }

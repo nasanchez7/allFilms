@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header/Header'
 import Layout from '../components/Layout'
 import Proximamente from '../components/Proximamente/Proximamente';
+import { NextUIProvider } from '@nextui-org/react';
 
 export default function Home({info, infoSeries}) {
   return (
@@ -12,14 +13,17 @@ export default function Home({info, infoSeries}) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
       </Head>
-      <Layout>
-        <Header/>
-        <Proximamente peliculas={info} series={infoSeries} />
-      </Layout>
+      <NextUIProvider>
+        <Layout>
+          <Header/>
+          <Proximamente peliculas={info} series={infoSeries} />
+        </Layout>
+      </NextUIProvider>
     </div>
   )
 }
