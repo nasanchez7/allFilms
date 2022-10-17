@@ -3,8 +3,14 @@ import Header from '../components/Header/Header'
 import Layout from '../components/Layout'
 import Proximamente from '../components/Proximamente/Proximamente';
 import { NextUIProvider } from '@nextui-org/react';
+import { createTheme } from "@nextui-org/react"
 
 export default function Home({info, infoSeries}) {
+
+  const darkTheme = createTheme({
+    type: 'dark'
+  });
+
   return (
     <div>
       <Head>
@@ -18,7 +24,7 @@ export default function Home({info, infoSeries}) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
       </Head>
-      <NextUIProvider>
+      <NextUIProvider theme={darkTheme}>
         <Layout>
           <Header/>
           <Proximamente peliculas={info} series={infoSeries} />

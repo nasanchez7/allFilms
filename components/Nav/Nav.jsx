@@ -22,7 +22,9 @@ const Nav = ( ) => {
                 <Input clearable bordered initialValue="Buscar.." color="success"/>
             </div>
             <div className={styles.avatar}>
+            <Link href="https://developers.themoviedb.org/4/getting-started" passHref={true}>
                 <button>API</button>
+            </Link>    
             </div>
         </nav>
     )
