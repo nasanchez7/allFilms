@@ -1,0 +1,87 @@
+.container{
+    .portada{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-blend-mode: darken;
+        .imgInfo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                border-radius: 15px;
+            }
+            .info{
+                width: 40%;
+                margin-left: 50px;
+                h2{
+                    font-size: 35px;
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                }
+                h4{
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+                ul{
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    margin: 0px;
+                    li{
+                        color: #C8F560;
+                        padding: 3px 10px;
+                        border: 1px solid #C8F560;
+                        border-radius: 10px;
+                        margin-right: 15px;
+                        cursor: pointer;
+                    }
+                }
+                .cast{
+                    display: flex;
+                    flex-direction: column;
+                    width: auto;
+                    h2{
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .listActor{
+                        display: flex;
+                        .actor{
+                            margin-right: 20px;
+                            h4{
+                                width: 100px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    .similares{
+        background-color: black;
+        padding: 30px 50px;
+        margin-bottom: 50px;
+        .listSimilares{
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            overflow: auto;
+            .similar{
+                img{
+                    border-radius: 10px;
+                }
+                h3{
+                    width: 150px;
+                    font-size: 13px;
+                    margin: 0px;
+                }
+                margin-right: 20px;
+            }
+        }
+    }
+}

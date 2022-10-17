@@ -41,7 +41,6 @@ export async function getStaticProps () {
 
   const responseSeries = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=es&page=1`);
   const dataSeries = await responseSeries.json();
-  console.log(dataSeries.results)
 
   return {
     props: {

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Proximamente.module.scss";
+import Router from "next/router";
 
 const Proximamente = ({peliculas, series}) => {
 
@@ -18,6 +19,9 @@ const Proximamente = ({peliculas, series}) => {
                         <div
                         key={index}
                         className={styles.movie}
+                        onClick={(e)=>{
+                            Router.push("/peliculas/[id]", `/peliculas/${p.id}`)
+                        }}
                         >
                             <Image
                             src={img500+p.poster_path}
