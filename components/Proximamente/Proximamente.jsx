@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Proximamente.module.scss";
 
 const Proximamente = ({peliculas, series}) => {
@@ -8,7 +9,8 @@ const Proximamente = ({peliculas, series}) => {
     return(
         <div className={styles.container}>
             <div className={styles.title}>
-                <h3>Peliculas destacadas</h3>
+                <h3>Peliculas populares</h3>
+                <Link href={"/peliculas"}>Ver todas</Link>
             </div>
             <div className={styles.listMovies}>
                 {peliculas.map((p, index)=> {
@@ -35,7 +37,8 @@ const Proximamente = ({peliculas, series}) => {
                 })}
             </div>
             <div className={styles.title}>
-                <h3>Series destacadas</h3>
+                <h3>Series populares</h3>
+                <Link href={"/series"}>Ver todas</Link>
             </div>
             <div className={styles.listMovies}>
                 {series.map((s, index)=>{
