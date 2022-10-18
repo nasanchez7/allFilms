@@ -50,6 +50,9 @@ const Proximamente = ({peliculas, series}) => {
                         <div
                         key={index}
                         className={styles.movie}
+                        onClick={(e)=>{
+                            Router.push("/series/[id]", `/series/${s.id}`)
+                        }}
                         >
                             <Image
                             src={img500+s.poster_path}

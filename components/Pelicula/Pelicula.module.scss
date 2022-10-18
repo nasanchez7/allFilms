@@ -10,6 +10,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 50px;
             img{
                 border-radius: 15px;
             }
@@ -17,16 +18,18 @@
                 width: 40%;
                 margin-left: 50px;
                 h2{
-                    font-size: 35px;
+                    font-size: 1.5rem;
                     font-weight: 800;
                     letter-spacing: 2px;
                 }
                 h4{
                     font-weight: 400;
-                    font-size: 15px;
+                    font-size: 1.0rem;
+                    overflow: auto;
                 }
                 ul{
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     list-style: none;
                     margin: 0px;
@@ -49,6 +52,9 @@
                     }
                     .listActor{
                         display: flex;
+                        flex-wrap: wrap;
+                        overflow: auto;
+                        height: 250px;
                         .actor{
                             margin-right: 20px;
                             h4{
@@ -64,8 +70,7 @@
     }
     .similares{
         background-color: black;
-        padding: 30px 50px;
-        margin-bottom: 50px;
+        padding: 50px;
         .listSimilares{
             width: 100%;
             justify-content: center;
@@ -74,6 +79,7 @@
             .similar{
                 img{
                     border-radius: 10px;
+                    cursor: pointer;
                 }
                 h3{
                     width: 150px;

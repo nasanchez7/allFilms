@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Pagination } from "@nextui-org/react";
 import { useState } from 'react';
 import { Progress } from "@nextui-org/react";
+import Router from "next/router";
 
 const Series = ({series}) => {
     const img500 = "https://image.tmdb.org/t/p/w500"; 
@@ -36,6 +37,9 @@ const Series = ({series}) => {
                         <div
                         key={index}
                         className={styles.movie}
+                        onClick={(e)=>{
+                            Router.push("/series/[id]", `/series/${s.id}`)
+                        }}
                         >
                             <Image
                             src={img500+s.poster_path}

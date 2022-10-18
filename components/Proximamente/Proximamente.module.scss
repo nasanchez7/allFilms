@@ -1,5 +1,5 @@
 .container{
-    padding: 50px;
+    padding: 100px;
     .title{
         width: 100%;
         padding: 20px 40px;
@@ -26,7 +26,7 @@
     }
     .listMovies{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         align-items: center;
         justify-items: center;
         .movie{

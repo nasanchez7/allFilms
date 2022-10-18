@@ -3,22 +3,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
     .proximamente{
         display: flex;
         position: relative;
-        width: 80%;
-        height: 500px;
-        background: linear-gradient(357deg, rgba(0,0,0,1) 0%, rgba(51,120,255,0) 100%), url("/avatar.jpg");
-        border-radius: 25px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-        overflow: hidden;
-        cursor: pointer;
+        width: 100%;
+        height: 100vh;
         .info{
             position: absolute;
             bottom: 0;
             padding: 20px 50px;
+            .genres{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    margin: 0px;
+                    li{ 
+                        background-color: #00000088;
+                        color: #C8F560;
+                        padding: 3px 10px;
+                        border: 1px solid #C8F560;
+                        border-radius: 10px;
+                        margin-right: 15px;
+                        cursor: pointer;
+                    }
+                }
+            }
             h4{
                 color: #C8F560;
                 margin: 0px;
@@ -31,6 +42,7 @@
             .trailer{
                 display: flex;
                 align-items: center;
+                margin-top: 20px;
                 cursor: pointer;
                 a{
                     display: flex;

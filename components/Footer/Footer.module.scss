@@ -1,0 +1,57 @@
+.footer{
+    background-color: black!important;
+    .uno{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        .contacto{
+            a{
+                color: white;
+                border-bottom: 1px solid white;
+                margin-right: 20px;
+            }
+            a:hover{
+                transition: 0.5s;
+                color: #C8F560;
+            }
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            h3{
+                color: white;
+                font-size: 35px;
+            }
+            h2{
+                color: #C8F560;
+                font-size: 35px;
+            }
+        }
+        .links{
+            display: flex;
+            flex-wrap: wrap;
+            i{
+                font-size: 30px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+            i:hover{
+                transition: 0.5s;
+                color: #C8F560;
+            }
+        }
+    }
+    .dos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        p{
+            font-weight: 600;
+        }
+    }
+}

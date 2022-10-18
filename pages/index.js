@@ -5,7 +5,8 @@ import Proximamente from '../components/Proximamente/Proximamente';
 import { NextUIProvider } from '@nextui-org/react';
 import { createTheme } from "@nextui-org/react"
 
-export default function Home({info, infoSeries}) {
+
+export default function Home({info, infoSeries, infoHeader, infoImg}) {
 
   const darkTheme = createTheme({
     type: 'dark'
@@ -26,7 +27,7 @@ export default function Home({info, infoSeries}) {
       </Head>
       <NextUIProvider theme={darkTheme}>
         <Layout>
-          <Header/>
+          <Header movie={infoHeader} img={infoImg} />
           <Proximamente peliculas={info} series={infoSeries} />
         </Layout>
       </NextUIProvider>
@@ -42,10 +43,19 @@ export async function getStaticProps () {
   const responseSeries = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=es&page=1`);
   const dataSeries = await responseSeries.json();
 
+  const header = await fetch(`https://api.themoviedb.org/3/movie/718930?api_key=${apiKey}&language=es`)
+  const dataHeader = await header.json();
+
+  const imgHeader = await fetch(`https://api.themoviedb.org/3/movie/718930/images?api_key=${apiKey}&language=es`)
+  const dataImg = await imgHeader.json()
+
+
   return {
     props: {
       info: data.results,
-      infoSeries: dataSeries.results
+      infoSeries: dataSeries.results,
+      infoHeader: dataHeader,
+      infoImg: dataImg
     }
   }
 }
