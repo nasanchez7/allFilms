@@ -29,7 +29,9 @@ const Pelicula = ({data, dataImg, cast, similar}) => {
           </Head>
           <NextUIProvider theme={darkTheme}>
             <Layout>
-                <PeliculaInfo id={id} data={data} img={dataImg} cast={cast} similares={similar} />
+                <PeliculaInfo
+                id={id} data={data} img={dataImg} cast={cast} similares={similar}
+                />
             </Layout>
           </NextUIProvider>
         </div>
@@ -82,7 +84,7 @@ export async function getStaticProps({params}){
 
     const similar = await fetch(`https://api.themoviedb.org/3/movie/${params.id}/similar?api_key=${apiKey}&language=en-US&page=1`)
     const dataSimilar = await similar.json()
-    console.log(dataSimilar.results)
+
 
     return{
         props: {

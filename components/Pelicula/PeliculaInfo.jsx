@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Pelicula.module.scss";
 
-const PeliculaInfo = ({id, data, img, cast, similares}) => {
+const PeliculaInfo = ({data, img, cast, similares}) => {
 
     const imagen = "https://image.tmdb.org/t/p/original";
 
