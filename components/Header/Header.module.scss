@@ -68,3 +68,15 @@
     }
 }
 
+@media screen and (max-width: 386px){
+    .header{
+        .proximamente{
+            .info{
+                padding: 10px;
+                h4{ 
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

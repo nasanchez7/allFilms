@@ -2,6 +2,7 @@
     .portada{
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -9,6 +10,7 @@
         .imgInfo{
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
             margin-top: 50px;
             img{
@@ -87,6 +89,21 @@
                     margin: 0px;
                 }
                 margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 582px){
+    .container{
+        .portada{
+            height: 120vh!important;
+            .imgInfo{
+                .info{
+                    width: 100%;
+                    margin: 0px;
+                    padding: 10px;
+                }
             }
         }
     }
