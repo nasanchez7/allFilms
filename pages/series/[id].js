@@ -19,7 +19,7 @@ const Pelicula = ({data, dataImg, cast, similar}) => {
           <Head>
             <title>allFilms - Series</title>
             <meta name="description" content="Films" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/favicon.png" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>

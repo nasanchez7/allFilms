@@ -15,7 +15,7 @@ const peliculas = ({info}) => {
             <Head>
                 <title>allFilms - Peliculas</title>
                 <meta name="description" content="Films" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
