@@ -11,6 +11,7 @@
 ## Herramientas y lenguajes utilizados
 
 - Next JS
+- NextUI
 - SASS
 - Boxicons
 - themoviedb API
@@ -18,6 +19,7 @@
 ## Librerias usadas
 
 - Boxicons
+- NextUI
 
 ## Diseñada y construida por
 
