@@ -30,9 +30,9 @@ const SerieInfo = ({data, img, cast, similares}) => {
                         <div className={styles.cast} >
                             <h2>Reparto</h2>
                             <div className={styles.listActor}>
-                                {newCast.map((c)=>{
+                                {newCast.map((c, index)=>{
                                     return(
-                                        <div className={styles.actor}>
+                                        <div key={index} className={styles.actor}>
                                             <Image
                                             src={imagen + c.profile_path}
                                             height={150}
@@ -75,9 +75,9 @@ const SerieInfo = ({data, img, cast, similares}) => {
                             <div className={styles.cast} >
                                 <h2>Reparto</h2>
                                 <div className={styles.listActor}>
-                                    {newCast.map((c)=>{
+                                    {newCast.map((c, index)=>{
                                         return(
-                                            <div className={styles.actor}>
+                                            <div key={index} className={styles.actor}>
                                                 <Image
                                                 src={imagen + c.profile_path}
                                                 height={150}
@@ -98,7 +98,7 @@ const SerieInfo = ({data, img, cast, similares}) => {
                 <div className={styles.listSimilares} >
                     {newSimilares.map((s, index)=>{
                         return(
-                            <div className={styles.similar} >
+                            <div key={index} className={styles.similar} >
                                 <Image
                                 src={imagen+s.poster_path}
                                 height={320}
