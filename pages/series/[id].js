@@ -71,6 +71,8 @@ export async function getStaticProps({params}){
     const response = await fetch(`https://api.themoviedb.org/3/tv/${params.id}?api_key=${apiKey}&language=es`)
     const data = await response.json()
 
+    
+
     const images = await fetch(`
     https://api.themoviedb.org/3/tv/${params.id}/images?api_key=${apiKey}&language=es`)
     const dataImg = await images.json()
@@ -78,7 +80,7 @@ export async function getStaticProps({params}){
     const cast = await fetch(`
     https://api.themoviedb.org/3/tv/${params.id}/credits?api_key=${apiKey}&language=es`)
     const dataCast = await cast.json()
-
+    console.log(dataCast.cast)
     const similar = await fetch(`https://api.themoviedb.org/3/tv/${params.id}/similar?api_key=${apiKey}&language=en-US&page=1`)
     const dataSimilar = await similar.json()
 

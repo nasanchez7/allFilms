@@ -23,11 +23,14 @@ const SerieInfo = ({data, img, cast, similares}) => {
                 <div className={styles.imgInfo} >
                         <div>
                             <div className={styles.disponible} >
+                                {data.networks[0] === undefined ? "" :
                                 <h4>Disponible en {data.networks[0].name} </h4>
-                            </div>
+                                }
+                            </div> 
                         </div>
                     <div className={styles.info} >
-                        <h2> {data.name} </h2>
+                        {data.name === undefined ? "" : <h2> {data.name} </h2>}
+                        
                         <ul> {data.genres.map((g)=>{
                             return(
                                 <li key={g.id}> {g.name} </li>
@@ -36,6 +39,7 @@ const SerieInfo = ({data, img, cast, similares}) => {
                         <h4> {data.overview} </h4>
                         <div className={styles.cast} >
                             <h2>Reparto</h2>
+                            {cast[0] === false ? "" :
                             <div className={styles.listActor}>
                                 {newCast.map((c, index)=>{
                                     return(
@@ -45,11 +49,12 @@ const SerieInfo = ({data, img, cast, similares}) => {
                                             height={150}
                                             width={100}
                                             />
-                                            <h4> {c.name} </h4>
+                                            {c.name === undefined ? "" : <h4> {c?.name} </h4>}
                                         </div>
                                     )
                                 })}
                             </div>
+                            } 
                         </div>
                     </div>
                 </div>
@@ -73,11 +78,13 @@ const SerieInfo = ({data, img, cast, similares}) => {
                             height={450}
                             />
                             <div className={styles.disponible} >
+                                {data.networks[0] === undefined ? "" :
                                 <h4>Disponible en {data.networks[0].name} </h4>
+                                }
                             </div>
                         </div>
                         <div className={styles.info} >
-                            <h2> {data.name} </h2>
+                            {data.name === undefined ? "" : <h2> {data.name} </h2>}
                             <ul> {data.genres.map((g)=>{
                                 return(
                                     <li key={g.id}> {g.name} </li>
