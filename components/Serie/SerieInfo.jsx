@@ -114,18 +114,19 @@ const SerieInfo = ({data, img, cast, similares}) => {
                     </div>
                 </div>
             }
-            <div className={styles.similares}>
+            <div className={styles.temporadas}>
                 <h3>Temporadas emitidas</h3>
-                <div className={styles.listSimilares} >
+                <div className={styles.listTemporadas} >
                     {data.seasons.map((s, index)=>{
                         return(
-                            <div key={index} className={styles.similar} >
+                            <div key={index} className={styles.temporada} >
                                 <Image
                                 src={imagen+s.poster_path}
                                 height={320}
                                 width={220}
                                 />
                                 <h3>{s.name}</h3>
+                                <h4> {s.episode_count} capitulos </h4>
                             </div>
                         )
                     })}
@@ -139,7 +140,8 @@ const SerieInfo = ({data, img, cast, similares}) => {
                     height={281}
                     width={500}
                     />
-                    <h3> Capitulo {data.last_episode_to_air.episode_number} - {data.last_episode_to_air.name} </h3>
+                    <h3> Temporada {data.last_episode_to_air.season_number} </h3>
+                    <h4> Capitulo {data.last_episode_to_air.episode_number} - {data.last_episode_to_air.name} </h4>
                 </div>
                 {data.next_episode_to_air === null ? "" :
                 <div className={styles.capitulo} >
@@ -149,7 +151,8 @@ const SerieInfo = ({data, img, cast, similares}) => {
                     height={281}
                     width={500}
                     />
-                    <h3> Capitulo {data.next_episode_to_air.episode_number} - {data.next_episode_to_air.name} </h3>
+                    <h3> Temporada {data.next_episode_to_air.season_number} </h3>
+                    <h4> Capitulo {data.next_episode_to_air.episode_number} - {data.next_episode_to_air.name} </h4>
                 </div>
                 }
             </div>

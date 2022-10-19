@@ -105,13 +105,20 @@
         .capitulo{
             img{
                 border-radius: 10px;
+                cursor: pointer;
             }
             h2{
                 font-weight: 500;
                 font-size: 20px;
             }
             h3{ 
-                font-size: 15px;
+                font-size: 17px;
+                font-weight: 600;
+                margin: 0px;
+            }
+            h4{ 
+                margin: 0px;
+                font-size: 11px;
                 font-weight: 400;
             }
         }
@@ -120,7 +127,7 @@
         background-color: black;
         padding: 30px;
         .listSimilares{
-            padding: 50px;
+            padding: 30px;
             width: 100%;
             display: flex;
             overflow: auto;
@@ -133,6 +140,33 @@
                     width: 150px;
                     font-size: 13px;
                     margin: 0px;
+                }
+                margin-right: 20px;
+            }
+        }
+    }
+    .temporadas{
+        background-color: black;
+        padding: 30px;
+        .listTemporadas{
+            padding: 30px 0px;
+            height: auto;
+            width: 100%;
+            display: flex;
+            overflow: auto;
+            .temporada{
+                img{
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                h3{
+                    width: 150px;
+                    font-size: 17px;
+                    margin: 0px;
+                }
+                h4{
+                    font-size: 11px;
+                    font-weight: 400;
                 }
                 margin-right: 20px;
             }
@@ -167,6 +201,36 @@
 }
 
 .listSimilares::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.listTemporadas::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.listTemporadas::-webkit-scrollbar:vertical {
+    width:7px;
+}
+
+.listTemporadas::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.listTemporadas::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+.listTemporadas::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);        
+}
+
+.listTemporadas::-webkit-scrollbar-thumb {
+    background-color: #C8F560;
+    border-radius: 30px;
+    border: 2px solid #C8F560;
+}
+
+.listTemporadas::-webkit-scrollbar-track {
     border-radius: 10px;  
 }
 
