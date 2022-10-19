@@ -70,7 +70,6 @@ export async function getStaticProps({params}){
 
     const response = await fetch(`https://api.themoviedb.org/3/tv/${params.id}?api_key=${apiKey}&language=es`)
     const data = await response.json()
-    
 
     const images = await fetch(`
     https://api.themoviedb.org/3/tv/${params.id}/images?api_key=${apiKey}&language=es`)

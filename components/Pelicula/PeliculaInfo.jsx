@@ -15,8 +15,7 @@ const PeliculaInfo = ({data, img, cast, similares}) => {
             <div style={{
                 background: `
                 linear-gradient(357deg, rgba(0,0,0,1) 0%, rgba(51,120,255,0) 100%),
-                rgba(0, 0, 0, 0.7)`,
-                height: "100vh",
+                rgba(0, 0, 0, 0.7)`
             }} className={styles.portada} >
                 <div className={styles.imgInfo} >
                     <div className={styles.info} >
