@@ -37,6 +37,7 @@ const Series = ({series}) => {
                         <div
                         key={index}
                         className={styles.movie}
+                        data-test-id={`serie${index}`}
                         onClick={(e)=>{
                             Router.push("/series/[id]", `/series/${s.id}`)
                         }}
@@ -60,7 +61,7 @@ const Series = ({series}) => {
             </div>
             }
             <div className={styles.pagination}>
-                <Pagination total={5} color="success" onChange={(event)=>{
+                <Pagination data-test-id="paginacion" total={5} color="success" onChange={(event)=>{
                     setLoading(true)
                     getData(event)
                 }} />

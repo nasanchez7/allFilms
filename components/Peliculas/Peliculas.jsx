@@ -37,6 +37,7 @@ const Peliculas = ({peliculas}) => {
                             <div
                             key={index}
                             className={styles.movie}
+                            data-test-id={`pelicula${index}`}
                             onClick={(e)=>{
                                 Router.push("/peliculas/[id]", `/peliculas/${p.id}`)
                             }}

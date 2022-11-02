@@ -11,7 +11,7 @@ const PeliculaInfo = ({data, img, cast, similares}) => {
 
     return(
         <div className={styles.container} >
-            {img.backdrops[0] === undefined ?
+            {img.backdrops || img.posters === undefined ?
             <div style={{
                 background: `
                 linear-gradient(357deg, rgba(0,0,0,1) 0%, rgba(51,120,255,0) 100%),
@@ -59,7 +59,7 @@ const PeliculaInfo = ({data, img, cast, similares}) => {
                 }} className={styles.portada} >
                     <div className={styles.imgInfo} >
                         <Image
-                        src={`${imagen}${img.posters[0].file_path}`}
+                        src={`${imagen}${img?.posters[0].file_path}`}
                         width={300}
                         height={450}
                         />
